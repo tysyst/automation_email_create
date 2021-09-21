@@ -1,4 +1,4 @@
-def ムームードメインのアカウントへログイン():
+def ムームードメインのアカウントへログイン(): #📍 日本語 !?
     print("メアド作成スタート")
     time.sleep(1)
     pyautogui.hotkey('right')
@@ -15,6 +15,8 @@ def ムームードメインのアカウントへログイン():
     # print(copy)
     webbrowser.open("https://muumuu-domain.com/?mode=conpane&state=mail_edit_address") #muumuu-domain開く
     time.sleep(3)
+
+    #📍ここに１行とか、空白行があっても見やすくて良いのではないでしょうか
     #ログイン時のアカウント名入力欄移動後、既存の情報を消す
     for i in range(3):
         pyautogui.hotkey('tab')
@@ -22,6 +24,8 @@ def ムームードメインのアカウントへログイン():
     pyautogui.hotkey('backspace') 
 
     #ドメイン番号でアカウント切り替え
+    #📍３つのアカウントで分岐が違うなら、それぞれの動きについて、共通の関数を作ってもよいのでは？
+    #📍 例： __login(account_name):
     if 3<= int(domain_number) <=20 : #（3～20）真之アカ
         time.sleep(0.6)
         pyperclip.copy("saneyuki.akiyama2018@gmail.com")
